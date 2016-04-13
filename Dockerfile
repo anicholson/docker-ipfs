@@ -32,3 +32,6 @@ RUN git checkout ${IPFS_VERSION}
 RUN make toolkit_upgrade
 
 RUN make install
+
+ONBUILD RUN ipfs init
+ONBUILD EXPOSE 8080
